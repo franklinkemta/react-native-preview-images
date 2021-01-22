@@ -1,6 +1,6 @@
 {
   "name": "react-native-preview-images",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A React Native library to show images grid with previews like your favorite platforms!",
   "author": "Franklin Kemta <https://franklinkemta-2020.firebaseapp.com/>",
   "main": "src/index.js",

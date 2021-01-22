@@ -11,7 +11,7 @@
 
 # react-native-preview-images
 
-> A **React Native** library to show images grid in preview messages like your favorite platforms! (WhatsApp, Messenger)
+> A **React Native** library to show images in a preview grid with custom actions !
 
 [![NPM](https://img.shields.io/npm/v/react-native-preview-images.svg)](https://www.npmjs.com/package/react-native-preview-images)
 [![NPM](https://img.shields.io/github/license/ovi/react-native-preview-images.svg)](https://www.npmjs.com/package/react-native-preview-images)
@@ -49,7 +49,7 @@ yarn add react-native-preview-images
 | style                                         |                                                         object                                                         |      `{}`      |                                      |
 | backgroundColor                               |                                                         string                                                         | `'lightgreen'` | `'red'` <br /> OR <br /> `'#ff0000'` |
 | width                                         |                                             string <br /> OR <br /> number                                             |    `'100%'`    |    `'50%'` <br /> OR <br /> `360`    |
-
+| onImageListItemTap | number | `undefined` 
 > **\*** if you pass array of objects you may also provide some extra information: see > [Image Props](#props--images--array-of-objects)
 
 ### Examples

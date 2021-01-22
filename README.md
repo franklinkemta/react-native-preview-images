@@ -13,9 +13,6 @@
 
 > A **React Native** library to show images in a preview grid with custom actions !
 
-[![NPM](https://img.shields.io/npm/v/react-native-preview-images.svg)](https://www.npmjs.com/package/react-native-preview-images)
-[![NPM](https://img.shields.io/github/license/ovi/react-native-preview-images.svg)](https://www.npmjs.com/package/react-native-preview-images)
-
 </p>
 
 <h3 align="center">

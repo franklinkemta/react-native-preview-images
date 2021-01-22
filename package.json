@@ -7,7 +7,8 @@
   "types": "src/components/Images.d.ts",
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react-native-image-zoom-viewer": "^2.2.26"
+    "react-native-image-zoom-viewer": "^2.2.26",
+    "react-native-safe-area-context": "^3.1.9"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,6 @@
     "grid-images",
     "react-native-chat-images",
     "react-native-images",
-    "whatsapp-images"
+    "responsive-grid-images"
   ]
 }

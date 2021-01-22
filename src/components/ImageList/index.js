@@ -9,13 +9,16 @@ import {
   ActivityIndicator,
   Text,
 } from 'react-native';
-import ImageViewer from 'react-native-image-zoom-viewer';
+// import ImageViewer from 'react-native-image-zoom-viewer';
 import PropTypes from 'prop-types';
 
 import Img from '../Img';
 import { BackIcon } from '../Icons';
 import { trueTypeOf } from '../../utils';
 import styles from './styles';
+
+// added save area view dependenciy
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 class ImageList extends Component {
   state = {
@@ -37,7 +40,9 @@ class ImageList extends Component {
     this.setState({ showImg: !showImg });
   };
 
-  showImgInModal = indexOfImg => {
+  showImgInModal = (indexOfImg) => {
+    // render the modal only when a children component was set
+    if (!this.props.children) return null;
     this.setState({ imgToShow: indexOfImg, showImg: true });
   };
 
@@ -45,7 +50,7 @@ class ImageList extends Component {
     const { setModalVisible, title } = this.props;
 
     return (
-      <View style={styles.backBtnView}>
+      <SafeAreaView style={styles.backBtnView}>
         <TouchableOpacity
           onPress={() => setModalVisible(false)}
           style={styles.backBtnTouchableOpacity}
@@ -57,7 +62,7 @@ class ImageList extends Component {
           />
         </TouchableOpacity>
         {title && <Text style={styles.title}>{title}</Text>}
-      </View>
+      </SafeAreaView>
     );
   };
 
@@ -78,9 +83,9 @@ class ImageList extends Component {
 
   render() {
     const { showImg, imgToShow } = this.state;
-    const { images, saveOnLongPress } = this.props;
+    const { images } = this.props;
 
-    const imageUrls = images.map(image => {
+    const imageUrls = images.map((image) => {
       const hasMoreData = trueTypeOf(image) === 'object';
       return { url: hasMoreData ? image.url : image };
     });
@@ -88,7 +93,7 @@ class ImageList extends Component {
     return (
       <View style={styles.container}>
         {this.renderBackBtn()}
-        <ScrollView ref={view => (this.scrollView = view)}>
+        <ScrollView ref={(view) => (this.scrollView = view)}>
           {this.renderImages()}
         </ScrollView>
 
@@ -98,15 +103,7 @@ class ImageList extends Component {
             transparent={false}
             onRequestClose={() => this.setState({ showImg: false })}
           >
-            <ImageViewer
-              index={imgToShow}
-              loadingRender={() => (
-                <ActivityIndicator size="small" color="#eee" />
-              )}
-              imageUrls={imageUrls}
-              saveToLocalByLongPress={saveOnLongPress}
-              pageAnimateTime={0}
-            />
+            {this.props.children ?? null}
           </Modal>
         </View>
       </View>
@@ -117,7 +114,6 @@ class ImageList extends Component {
 ImageList.defaultProps = {
   backgroundColor: 'lightgreen',
   index: 0,
-  saveOnLongPress: true,
   setModalVisible: () => {},
   title: undefined,
 };
@@ -137,7 +133,6 @@ ImageList.propTypes = {
     ]),
   ).isRequired,
   index: PropTypes.number,
-  saveOnLongPress: PropTypes.bool,
   setModalVisible: PropTypes.func,
   title: PropTypes.string,
 };

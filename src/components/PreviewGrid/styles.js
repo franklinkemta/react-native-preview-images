@@ -50,10 +50,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height: '50%',
   },
-  titleStyle: {
-    fontSize: 16,
-    paddingLeft: 5,
-  },
 });
 
 export default styles;

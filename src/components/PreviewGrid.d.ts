@@ -10,20 +10,19 @@ export interface Props {
   backgroundColor?: string;
   extra?: string | undefined;
   images: ArrayOfImagesObject[] | String[];
-  saveOnLongPress?: boolean;
   style?: object;
   title?: string | undefined;
   width?: string | number;
+  onImageListItemTap?(index: number): void; // shares updates with parent
 }
 declare class State {
   modalVisible: boolean;
   activeImageIndex: number;
 }
-export default class Images extends React.Component<Props, State> {
+export default class PreviewGrid extends React.Component<Props, State> {
   static defaultProps: {
     backgroundColor: string;
     extra: undefined;
-    saveOnLongPress: boolean;
     style: {};
     title: undefined;
     width: string;

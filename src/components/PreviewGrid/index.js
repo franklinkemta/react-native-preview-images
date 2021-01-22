@@ -6,7 +6,20 @@ import Img from '../Img';
 import ImageList from '../ImageList';
 import styles from './styles';
 
-class Images extends Component {
+const themes = {
+  light: {
+    foreground: '#000000',
+    background: '#eeeeee',
+  },
+  dark: {
+    foreground: '#ffffff',
+    background: '#222222',
+  },
+};
+
+const ThemeContext = React.createContext(themes.light);
+
+class PreviewGrid extends Component {
   state = {
     activeImageIndex: 0,
     modalVisible: false,
@@ -22,7 +35,6 @@ class Images extends Component {
 
     const allImages = (
       <View style={[styles.imageContainer, { backgroundColor }]}>
-        {title && <Text style={styles.titleStyle}>{title}</Text>}
         <View style={styles.flexRow}>
           {images.map((image, i) => (
             <TouchableOpacity
@@ -52,7 +64,6 @@ class Images extends Component {
 
     return (
       <View style={[styles.imageContainer, { backgroundColor }]}>
-        {title && <Text style={styles.titleStyle}>{title}</Text>}
         <View style={styles.fourImagesInnerView}>
           {images.map((image, i) => (
             <TouchableOpacity
@@ -76,7 +87,6 @@ class Images extends Component {
 
     return (
       <View style={[styles.imageContainer, { backgroundColor }]}>
-        {title && <Text style={styles.titleStyle}>{title}</Text>}
         <View style={styles.moreThanFourImagesInnerView}>
           <TouchableOpacity
             onPress={() => this.showImageListModal(!modalVisible, 0)}
@@ -122,14 +132,7 @@ class Images extends Component {
   };
 
   render() {
-    const {
-      backgroundColor,
-      images,
-      saveOnLongPress,
-      style,
-      title,
-      width,
-    } = this.props;
+    const { backgroundColor, images, style, title, width } = this.props;
     const { activeImageIndex, modalVisible } = this.state;
 
     return (
@@ -148,7 +151,7 @@ class Images extends Component {
           }}
         >
           <ImageList
-            saveOnLongPress={saveOnLongPress}
+            onImageListItemTap={(item) => this.props.onImageListItemTap(item)}
             index={activeImageIndex}
             backgroundColor={backgroundColor}
             setModalVisible={this.showImageListModal}
@@ -161,16 +164,16 @@ class Images extends Component {
   }
 }
 
-Images.defaultProps = {
-  backgroundColor: 'lightgreen',
+PreviewGrid.defaultProps = {
+  backgroundColor: 'transparent',
   extra: undefined,
-  saveOnLongPress: true,
   style: {},
   title: undefined,
   width: '100%',
+  onImageListItemTap: () => {}, // share image list item click to parent
 };
 
-Images.propTypes = {
+PreviewGrid.propTypes = {
   backgroundColor: PropTypes.string,
   extra: PropTypes.string,
   images: PropTypes.arrayOf(
@@ -185,10 +188,10 @@ Images.propTypes = {
       }).isRequired,
     ]),
   ).isRequired,
-  saveOnLongPress: PropTypes.bool,
   style: PropTypes.shape({}),
   title: PropTypes.string,
   width: PropTypes.string,
+  onImageListItemTap: PropTypes.func,
 };
 
-export default Images;
+export default PreviewGrid;

@@ -3,8 +3,11 @@
 # Roadmap
 
 - Remove unecessery dependencies, and update react-native dependencies
-- Add Item Tap event
 - Enhance the Item preview screen header, buttons and appearance
+- Add Custom ImageList onPress event to display a custom component or make a custom action on ImageList Item press
+- Remove the dependency to react-native-image-viewer package
+- Update Readme and Documentation.
+- Publish a realease !
 
 # react-native-chat-images
 

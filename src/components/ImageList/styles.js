@@ -7,24 +7,23 @@ const styles = StyleSheet.create({
   },
   backBtnView: {
     flexDirection: 'row',
+    minHeight: '6%',
     height: 'auto',
+    paddingHorizontal: 6,
     width: '100%',
   },
+  backBtnIcon: { height: 24 },
   caption: {
     color: 'lightgray',
     padding: 5,
     textAlign: 'center',
   },
   clickableImg: {
-    marginBottom: 5,
-    padding: 3,
+    marginBottom: 3,
   },
   container: {
     flex: 1,
-  },
-  modalView: {
-    alignItems: 'center',
-    flex: 1,
+    paddingHorizontal: 3,
   },
   title: {
     flex: 1,

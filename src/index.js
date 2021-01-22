@@ -1,4 +1,4 @@
-import Images from './components/Images/index';
-import { Props as ImagesPropsDefine } from './components/Images';
-export { Images, ImagesPropsDefine };
-export default Images;
+import PreviewGrid from './components/PreviewGrid/index';
+import { Props as PreviewGridPropsDefine } from './components/PreviewGrid';
+export { PreviewGrid, PreviewGridPropsDefine };
+export default PreviewGrid;

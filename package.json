@@ -1,8 +1,8 @@
 {
-  "name": "react-native-chat-images",
+  "name": "react-native-preview-images",
   "version": "1.0.1",
-  "description": "A React Native library to show images grid in chat messages like your favorite platforms!",
-  "author": "Ovi <contact@muhammadovi.com>",
+  "description": "A React Native library to show images grid with previews like your favorite platforms!",
+  "author": "Franklin Kemta <https://franklinkemta-2020.firebaseapp.com/>",
   "main": "src/index.js",
   "types": "src/components/Images.d.ts",
   "dependencies": {
@@ -11,17 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ovi/react-native-chat-images.git"
+    "url": "git+https://github.com/franklinkemta/react-native-preview-images.git"
   },
   "bugs": {
-    "url": "https://github.com/Ovi/react-native-chat-images/issues"
+    "url": "https://github.com/franklinkemta/react-native-preview-images/issues"
   },
-  "homepage": "https://github.com/Ovi/react-native-chat-images",
+  "homepage": "https://github.com/franklinkemta/react-native-preview-images",
   "license": "MIT",
   "keywords": [
-    "chat-images",
-    "chat-grid-images",
-    "chat-combine-images",
+    "preview-images",
+    "preview-grid-images",
+    "preview-combine-images",
     "grid-images",
     "react-native-chat-images",
     "react-native-images",

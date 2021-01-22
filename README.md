@@ -1,5 +1,11 @@
 ## THIS IS A FORK FROM <a href="https://github.com/Ovi/react-native-chat-images" target="_blank">react-native-chat-images official Package</a>
 
+# Roadmap
+
+- Remove unecessery dependencies, and update react-native dependencies
+- Add Item Tap event
+- Enhance the Item preview screen header, buttons and appearance
+
 # react-native-chat-images
 
 > A **React Native** library to show images grid in chat messages like your favorite platforms! (WhatsApp, Messenger)

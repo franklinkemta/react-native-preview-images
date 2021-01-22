@@ -9,28 +9,19 @@
 - Update Readme and Documentation.
 - Publish a realease !
 
-# react-native-chat-images
+# react-native-preview-images
 
-> A **React Native** library to show images grid in chat messages like your favorite platforms! (WhatsApp, Messenger)
+> A **React Native** library to show images grid in preview messages like your favorite platforms! (WhatsApp, Messenger)
 
-[![NPM](https://img.shields.io/npm/v/react-native-chat-images.svg)](https://www.npmjs.com/package/react-native-chat-images)
-[![NPM](https://img.shields.io/github/license/ovi/react-native-chat-images.svg)](https://www.npmjs.com/package/react-native-chat-images)
-
-<p align="center">
-    <img alt="react-native-chat-images" src="preview/sample.gif" width="260" height="510" />
- </a>
+[![NPM](https://img.shields.io/npm/v/react-native-preview-images.svg)](https://www.npmjs.com/package/react-native-preview-images)
+[![NPM](https://img.shields.io/github/license/ovi/react-native-preview-images.svg)](https://www.npmjs.com/package/react-native-preview-images)
 
 </p>
 
 <h3 align="center">
-  React Native Chat Images
+  React Native Preview Images
 </h3>
 
-<p align="center">
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=exp://expo.io/@muhammadovi/react-native-chat-images">
-  <br>
-  <a href="https://snack.expo.io/@muhammadovi/react-native-chat-images" target="_blank"><i>demo</i> <small> (expo)</small></a>
-</p>
 
 ## ChangeLog
 
@@ -39,18 +30,14 @@ You can find the complete changelog [on this file](/ChangeLog.md).
 ## Install
 
 ```bash
-npm i -S react-native-chat-images
+npm i -S react-native-preview-images
 ```
 
 OR
 
 ```bash
-yarn add react-native-chat-images
+yarn add react-native-preview-images
 ```
-
-## Usage
-
-![Example Code](/preview/usage.png)
 
 ## Props
 
@@ -62,7 +49,6 @@ yarn add react-native-chat-images
 | style                                         |                                                         object                                                         |      `{}`      |                                      |
 | backgroundColor                               |                                                         string                                                         | `'lightgreen'` | `'red'` <br /> OR <br /> `'#ff0000'` |
 | width                                         |                                             string <br /> OR <br /> number                                             |    `'100%'`    |    `'50%'` <br /> OR <br /> `360`    |
-| saveOnLongPress                               |                                                          bool                                                          |     `true`     |   `true` <br /> OR <br /> `false`    |
 
 > **\*** if you pass array of objects you may also provide some extra information: see > [Image Props](#props--images--array-of-objects)
 
@@ -73,7 +59,7 @@ yarn add react-native-chat-images
 ```jsx
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import Images from 'react-native-chat-images';
+import PreviewGrid from 'react-native-preview-images';
 
 export default class App extends Component {
   state = {
@@ -83,7 +69,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Images images={this.state.imgs} />
+        <PreviewGrid images={this.state.imgs} />
       </View>
     );
   }
@@ -95,7 +81,7 @@ export default class App extends Component {
 ```jsx
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import Images from 'react-native-chat-images';
+import PreviewGrid from 'react-native-preview-images';
 
 export default class App extends Component {
   state = {
@@ -110,7 +96,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Images images={this.state.images} />
+        <PreviewGrid images={this.state.images} />
       </View>
     );
   }
@@ -126,12 +112,6 @@ export default class App extends Component {
 | caption      |        string        |    no    |
 | captionStyle |        object        |    no    |
 | overlay      | `ReactNativeElement` |    no    |
-
-## Samples
-
-![Example Code](/preview/1.jpg)
-![Example Code](/preview/2.jpg)
-![Example Code](/preview/3.jpg)
 
 ## License
 

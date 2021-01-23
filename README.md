@@ -46,7 +46,7 @@ yarn add react-native-preview-images
 | style                                         |                                                         object                                                         |      `{}`      |                                      |
 | backgroundColor                               |                                                         string                                                         | `'lightgreen'` | `'red'` <br /> OR <br /> `'#ff0000'` |
 | width                                         |                                             string <br /> OR <br /> number                                             |    `'100%'`    |    `'50%'` <br /> OR <br /> `360`    |
-| onImageListItemTap | number | `undefined` 
+| onImageListItemTap | callback | `undefined` |  (index: number) => void
 > **\*** if you pass array of objects you may also provide some extra information: see > [Image Props](#props--images--array-of-objects)
 
 ### Examples

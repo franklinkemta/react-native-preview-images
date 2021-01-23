@@ -2,15 +2,23 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   backBtnTouchableOpacity: {
+    flex: 0,
+    alignContent: 'center',
     justifyContent: 'center',
+    alignSelf: 'stretch',
     width: 35,
   },
   backBtnView: {
     flexDirection: 'row',
-    minHeight: '6%',
-    height: 'auto',
-    paddingHorizontal: 6,
-    width: '100%',
+    minHeight: '8%',
+    justifyContent: 'flex-start',
+    alignContent: 'flex-start',
+    alignItems: 'flex-start',
+    paddingHorizontal: 8,
+    paddingVertical: 8,
+    left: 0,
+    right: 0,
+    top: 0,
   },
   backBtnIcon: { height: 24 },
   caption: {
@@ -28,8 +36,8 @@ const styles = StyleSheet.create({
   title: {
     flex: 1,
     fontWeight: 'bold',
-    padding: 5,
-    paddingRight: 35,
+    paddingHorizontal: 8,
+    alignSelf: 'center',
   },
 });
 

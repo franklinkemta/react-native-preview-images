@@ -5,20 +5,6 @@ import PropTypes from 'prop-types';
 import Img from '../Img';
 import ImageList from '../ImageList';
 import styles from './styles';
-
-const themes = {
-  light: {
-    foreground: '#000000',
-    background: '#eeeeee',
-  },
-  dark: {
-    foreground: '#ffffff',
-    background: '#222222',
-  },
-};
-
-const ThemeContext = React.createContext(themes.light);
-
 class PreviewGrid extends Component {
   state = {
     activeImageIndex: 0,
@@ -38,7 +24,7 @@ class PreviewGrid extends Component {
         <View style={styles.flexRow}>
           {images.map((image, i) => (
             <TouchableOpacity
-              key={`chat-image-${i}`}
+              key={i}
               onPress={() => this.showImageListModal(!modalVisible, i)}
               activeOpacity={0.8}
               style={styles.flexOne}
@@ -67,7 +53,7 @@ class PreviewGrid extends Component {
         <View style={styles.fourImagesInnerView}>
           {images.map((image, i) => (
             <TouchableOpacity
-              key={`chat-image-${i}`}
+              key={i}
               onPress={() => this.showImageListModal(!modalVisible, i)}
               activeOpacity={0.8}
               style={styles.flexBasisHalf}
@@ -143,7 +129,7 @@ class PreviewGrid extends Component {
         {images.length === 4 && this.fourImages()}
         {images.length > 4 && this.moreThanFourImages()}
         <Modal
-          animationType="slide"
+          animationType="fade"
           transparent={false}
           visible={modalVisible}
           onRequestClose={() => {

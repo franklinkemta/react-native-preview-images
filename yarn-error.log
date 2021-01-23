@@ -1,0 +1,65 @@
+Arguments: 
+  /home/frank_brain/.nvm/versions/node/v14.15.4/bin/node /usr/share/yarn/bin/yarn.js publish
+
+PATH: 
+  /home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/frank_brain/.nvm/versions/node/v14.15.4/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/frank_brain/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/frank_brain/.yarn/bin:/home/frank_brain/Android/Sdk/emulator:/home/frank_brain/Android/Sdk/tools:/home/frank_brain/Android/Sdk/tools/bin:/home/frank_brain/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.15.4
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/usr/share/yarn/lib/cli.js:137009:13)
+      at Interface.emit (events.js:315:20)
+      at Interface._ttyWrite (readline.js:875:16)
+      at ReadStream.onkeypress (readline.js:213:10)
+      at ReadStream.emit (events.js:315:20)
+      at emitKeys (internal/readline/utils.js:345:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1144:36)
+      at ReadStream.emit (events.js:315:20)
+      at addChunk (internal/streams/readable.js:309:12)
+
+npm manifest: 
+  {
+    "name": "react-native-preview-images",
+    "version": "1.0.0",
+    "description": "A React Native library to show images grid with previews like your favorite platforms!",
+    "author": "Franklin Kemta <https://franklinkemta-2020.firebaseapp.com/>",
+    "main": "src/index.js",
+    "types": "src/components/PreviewGrid.d.ts",
+    "dependencies": {
+      "prop-types": "^15.7.2",
+      "react-native-safe-area-context": "^3.1.9"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/franklinkemta/react-native-preview-images.git"
+    },
+    "bugs": {
+      "url": "https://github.com/franklinkemta/react-native-preview-images/issues"
+    },
+    "homepage": "https://github.com/franklinkemta/react-native-preview-images",
+    "license": "MIT",
+    "keywords": [
+      "preview-images",
+      "preview-grid-images",
+      "preview-combine-images",
+      "grid-images",
+      "react-native-chat-images",
+      "react-native-images",
+      "responsive-grid-images"
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

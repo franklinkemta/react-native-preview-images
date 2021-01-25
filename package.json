@@ -4,7 +4,7 @@
   "description": "A React Native library to show images grid with previews like your favorite platforms!",
   "author": "Franklin Kemta <https://franklinkemta-2020.firebaseapp.com/>",
   "main": "src/index.js",
-  "types": "src/components/PreviewGrid.d.ts",
+  "types": "src/components/types.d.ts",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react-native-safe-area-context": "^3.1.9"

@@ -1,20 +1,20 @@
 import * as React from 'react';
-interface ArrayOfImagesObject {
+type PreviewImage = {
   caption?: string;
   captionStyle?: object;
   overlay?: () => React.ReactElement<any>;
   thumbnail?: string;
   url: string;
-}
-export interface Props {
+};
+export type Props = {
   backgroundColor?: string;
   extra?: string | undefined;
-  images: ArrayOfImagesObject[] | String[];
+  images: PreviewImage[] | String[] | any[];
   style?: object;
   title?: string | undefined;
   width?: string | number;
   onImageListItemTap?(index: number): void; // shares updates with parent
-}
+};
 declare class State {
   modalVisible: boolean;
   activeImageIndex: number;

@@ -6,7 +6,7 @@ import AsyncImage from '../AsyncImage';
 import { trueTypeOf, getThumbnail } from '../../utils';
 import styles from './styles';
 
-const Img = props => {
+const Img = (props) => {
   const { style: propsStyle, image, hideCaption } = props;
   const hasMoreData = trueTypeOf(image) === 'object';
 

@@ -48,7 +48,7 @@ class ImageList extends Component {
             style={styles.backBtnIcon}
           />
         </TouchableOpacity>
-        {title && <Text style={styles.title}> {title}</Text>}
+        {title ? <Text style={styles.title}> {title}</Text> : null}
       </View>
     );
   };
